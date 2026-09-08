@@ -8,10 +8,16 @@ import SuperkidsTestimonials from '@/components/programs/superkids/SuperkidsTest
 import TeacherPreview from '@/components/programs/superkids/TeacherPreview';
 import LearningSpace from '@/components/programs/superkids/LearningSpace';
 import FinalCTA from '@/components/home/FinalCTA';
+import Seo from '@/components/shared/Seo';
 
 export default function SuperkidsProgramPage() {
   return (
     <>
+      <Seo
+        title="Tiếng Anh Thiếu nhi (6-10 tuổi) | ILE — Giao tiếp tự tin"
+        description="Chương trình Tiếng Anh Thiếu nhi tại ILE dành cho trẻ 6-10 tuổi — con phát triển đều bốn kỹ năng nghe, nói, đọc, viết và luyện giao tiếp tự tin trong tình huống thực tế."
+        image="https://res.cloudinary.com/wsaz946u/image/upload/v1788167370/cap-bac-pho-thong-feature-img-768x512.jpg"
+      />
       <PageBanner
         badge="6-10 tuổi"
         title="Tiếng Anh Thiếu nhi"

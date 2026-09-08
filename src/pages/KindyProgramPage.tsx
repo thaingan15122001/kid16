@@ -8,10 +8,16 @@ import KindyTestimonials from '@/components/programs/kindy/KindyTestimonials';
 import TeacherPreview from '@/components/programs/kindy/TeacherPreview';
 import LearningSpace from '@/components/programs/kindy/LearningSpace';
 import FinalCTA from '@/components/home/FinalCTA';
+import Seo from '@/components/shared/Seo';
 
 export default function KindyProgramPage() {
   return (
     <>
+      <Seo
+        title="Tiếng Anh Mầm non (3-5 tuổi) | ILE — Học qua vui chơi"
+        description="Chương trình Tiếng Anh Mầm non tại ILE dành cho trẻ 3-5 tuổi — con làm quen tiếng Anh qua kể chuyện, vận động, âm nhạc và trò chơi trong môi trường an toàn."
+        image="https://res.cloudinary.com/wsaz946u/image/upload/v1788167395/kindy_slide1.webp"
+      />
       <PageBanner
         badge="3-5 tuổi"
         title="Tiếng Anh Mầm non"
