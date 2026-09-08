@@ -14,7 +14,7 @@ export function useScrollToHash() {
     const scrollToElement = () => {
       const el = document.getElementById(hash);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+        requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth' }));
         return true;
       }
       return false;

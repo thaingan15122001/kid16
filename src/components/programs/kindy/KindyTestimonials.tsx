@@ -1,5 +1,6 @@
 import { type CSSProperties } from 'react';
 import { Sparkles, Star, Quote } from 'lucide-react';
+import { cloudinary, cloudinaryFit } from '@/lib/cloudinary';
 
 interface Testimonial {
   name: string;
@@ -69,7 +70,7 @@ export default function KindyTestimonials() {
       {/* Editorial background — soft, dimmed with cream overlay */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinaryFit(BG_IMAGE, 1280)}
           alt=""
           className="h-full w-full object-cover opacity-[0.10]"
         />
@@ -192,7 +193,7 @@ function TestimonialCard({
           style={{ borderRadius: testimonial.avatarShape }}
         >
           <img
-            src={testimonial.photo}
+            src={cloudinary(testimonial.photo, 56, 56)}
             alt={`Phụ huynh ${testimonial.name}`}
             className="h-full w-full object-cover object-center transition-transform duration-700 ease-smooth group-hover:scale-105"
             loading="lazy"

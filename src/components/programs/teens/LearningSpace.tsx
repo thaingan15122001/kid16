@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const photos: string[] = [
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167398/kindy_carousel-1.webp',
@@ -89,7 +90,7 @@ export default function LearningSpace() {
               style={{ borderRadius: photoShapes[i] }}
             >
               <img
-                src={photo}
+                src={cloudinary(photo, 420, 315)}
                 alt={`Không gian học tập tại ILE ${i + 1}`}
                 className="h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
                 loading="lazy"

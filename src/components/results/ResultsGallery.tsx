@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Sparkles } from 'lucide-react';
+import { cloudinary, cloudinaryFit } from '@/lib/cloudinary';
 
 type TabKey = 'ielts' | 'sat' | 'thcs';
 
@@ -114,7 +115,7 @@ export default function ResultsGallery() {
       {/* Background texture */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinaryFit(BG_IMAGE, 1280)}
           alt=""
           className="h-full w-full object-cover opacity-[0.10]"
         />
@@ -123,7 +124,7 @@ export default function ResultsGallery() {
 
       {/* Leon character accent near header */}
       <img
-        src={LEON}
+        src={cloudinaryFit(LEON, 80)}
         alt=""
         aria-hidden
         className="pointer-events-none absolute right-6 top-8 hidden h-20 w-20 drop-shadow-[0_8px_16px_rgba(31,42,55,0.12)] lg:block"
@@ -244,7 +245,7 @@ function ResultCard({
           style={{ borderRadius: photoShape }}
         >
           <img
-            src={photo}
+            src={cloudinary(photo, 400, 500)}
             alt={`Học viên ${entry.name}`}
             className="h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
             loading="lazy"

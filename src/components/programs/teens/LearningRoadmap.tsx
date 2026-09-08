@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { trialLink } from '@/lib/navigation';
+import { cloudinaryFit } from '@/lib/cloudinary';
 
 interface Milestone {
   num: string;
@@ -126,7 +127,7 @@ export default function LearningRoadmap() {
 
           {/* Small Character walking along the path */}
           <img
-            src={CHARACTER}
+            src={cloudinaryFit(CHARACTER, 128)}
             alt=""
             aria-hidden
             className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_6px_12px_rgba(31,42,55,0.12)]"

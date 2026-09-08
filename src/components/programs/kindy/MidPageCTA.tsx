@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { trialLink } from '@/lib/navigation';
+import { cloudinaryFit } from '@/lib/cloudinary';
 
 const LEON =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788166533/yeya-leon.png';
@@ -9,7 +10,7 @@ export default function MidPageCTA() {
     <section className="relative overflow-hidden bg-ink-900 py-12 lg:py-16">
       {/* Animal sticker */}
       <img
-        src={LEON}
+        src={cloudinaryFit(LEON, 112)}
         alt=""
         aria-hidden
         className="pointer-events-none absolute -top-4 right-12 hidden h-14 w-14 rotate-[8deg] opacity-90 drop-shadow-[0_6px_12px_rgba(31,42,55,0.25)] lg:block"

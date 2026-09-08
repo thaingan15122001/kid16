@@ -1,4 +1,5 @@
 import { Sparkles, MessagesSquare, BookOpenCheck, PenLine, ChartLine as LineChart } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 // TODO: replace with real photo
 const PHOTO =
@@ -154,7 +155,7 @@ export default function TeachingMethod() {
                 }}
               >
                 <img
-                  src={PHOTO}
+                  src={cloudinary(PHOTO, 420, 525)}
                   alt="Học sinh 6-10 tuổi học tiếng Anh tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"

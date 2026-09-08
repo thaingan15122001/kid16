@@ -1,4 +1,5 @@
 import { Sparkles, Star } from 'lucide-react';
+import { cloudinary, cloudinaryFit } from '@/lib/cloudinary';
 
 const PRIMARY_PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167403/kindy_machtieubang.webp';
@@ -21,7 +22,7 @@ export default function CourseOverview() {
       {/* Subtle background texture */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinaryFit(BG_IMAGE, 1280)}
           alt=""
           className="h-full w-full object-cover opacity-[0.08]"
         />
@@ -30,7 +31,7 @@ export default function CourseOverview() {
 
       {/* Animal accent */}
       <img
-        src={ANIMAL}
+        src={cloudinaryFit(ANIMAL, 128)}
         alt=""
         aria-hidden
         className="pointer-events-none absolute right-6 top-10 hidden h-16 w-16 rotate-[12deg] drop-shadow-[0_6px_12px_rgba(31,42,55,0.12)] lg:block"
@@ -48,7 +49,7 @@ export default function CourseOverview() {
                 }}
               >
                 <img
-                  src={PRIMARY_PHOTO}
+                  src={cloudinary(PRIMARY_PHOTO, 440, 550)}
                   alt="Bé học tiếng Anh Mầm non tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -66,7 +67,7 @@ export default function CourseOverview() {
                     }}
                   >
                     <img
-                      src={SECONDARY_PHOTO}
+                      src={cloudinary(SECONDARY_PHOTO, 144, 144)}
                       alt="Các bé cùng nhau học tập"
                       className="aspect-square w-full object-cover"
                       loading="lazy"

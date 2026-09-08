@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Sparkles, Globe } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Teacher {
   prefix: string;
@@ -187,7 +188,7 @@ export default function TeacherGallery() {
                 style={{ borderRadius: featured.photoShape }}
               >
                 <img
-                  src={featured.photo}
+                  src={cloudinary(featured.photo, 360, 450)}
                   alt={`${featured.prefix} ${featured.name}`}
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -255,7 +256,7 @@ export default function TeacherGallery() {
                       style={{ borderRadius: t.avatarShape }}
                     >
                       <img
-                        src={t.photo}
+                        src={cloudinary(t.photo, 96, 96)}
                         alt={`${t.prefix} ${t.name}`}
                         className="h-full w-full object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
                         loading="lazy"

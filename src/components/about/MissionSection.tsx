@@ -1,4 +1,5 @@
 import { Sparkles, BookOpen, Heart, Users } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const MISSION_PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167396/kindy_tranbaokhang.webp';
@@ -117,7 +118,7 @@ export default function MissionSection() {
                 }}
               >
                 <img
-                  src={MISSION_PHOTO}
+                  src={cloudinary(MISSION_PHOTO, 440, 550)}
                   alt="Học viên ILE phát triển tự tin"
                   className="h-full w-full object-cover"
                   loading="lazy"

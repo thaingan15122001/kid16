@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Globe } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const ANIMAL =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788166532/stream-1.svg';
@@ -155,7 +156,7 @@ function TeacherCard({
         style={{ borderRadius: teacher.avatarShape }}
       >
         <img
-          src={teacher.photo}
+          src={cloudinary(teacher.photo, 160, 160)}
           alt={`${teacher.prefix} ${teacher.name}`}
           className="h-full w-full object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
           loading="lazy"

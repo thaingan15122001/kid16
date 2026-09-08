@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const PRIMARY_PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167404/kindy_nguyenquangkhai.webp';
@@ -30,7 +31,7 @@ export default function VisionSection() {
                 }}
               >
                 <img
-                  src={PRIMARY_PHOTO}
+                  src={cloudinary(PRIMARY_PHOTO, 440, 550)}
                   alt="Học viên ILE đầy cảm hứng"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -48,7 +49,7 @@ export default function VisionSection() {
                     }}
                   >
                     <img
-                      src={SECONDARY_PHOTO}
+                      src={cloudinary(SECONDARY_PHOTO, 160, 160)}
                       alt="Các bé học tập tại ILE"
                       className="aspect-square w-full object-cover"
                       loading="lazy"

@@ -1,4 +1,5 @@
 import { Sparkles, Brain, PenTool, BookOpen, Presentation } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167370/cap-bac-nghe-thumbnail-768x512.jpg';
@@ -152,7 +153,7 @@ export default function TeachingMethod() {
                 }}
               >
                 <img
-                  src={PHOTO}
+                  src={cloudinary(PHOTO, 420, 525)}
                   alt="Học sinh 11-15 tuổi học tiếng Anh tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"

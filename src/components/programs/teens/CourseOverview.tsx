@@ -1,4 +1,5 @@
 import { Sparkles, Star } from 'lucide-react';
+import { cloudinary, cloudinaryFit } from '@/lib/cloudinary';
 
 const PRIMARY_PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167373/hs-vo-tran-song-thu.png';
@@ -21,7 +22,7 @@ export default function CourseOverview() {
       {/* Subtle background texture */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinaryFit(BG_IMAGE, 1280)}
           alt=""
           className="h-full w-full object-cover opacity-[0.08]"
         />
@@ -48,7 +49,7 @@ export default function CourseOverview() {
                 }}
               >
                 <img
-                  src={PRIMARY_PHOTO}
+                  src={cloudinary(PRIMARY_PHOTO, 440, 550)}
                   alt="Học sinh 11-15 tuổi học tiếng Anh tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -66,7 +67,7 @@ export default function CourseOverview() {
                     }}
                   >
                     <img
-                      src={SECONDARY_PHOTO}
+                      src={cloudinary(SECONDARY_PHOTO, 144, 144)}
                       alt="Các bạn học sinh cùng nhau học tập"
                       className="aspect-square w-full object-cover"
                       loading="lazy"

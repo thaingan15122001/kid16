@@ -1,5 +1,5 @@
 import { MessageCircle, Phone, Send } from 'lucide-react';
-import zaloLogo from '@/assets/images/image.png';
+import zaloLogo from '@/assets/images/zalo-logo.webp';
 
 const ZALO_URL = 'https://zalo.me/0398519485';
 

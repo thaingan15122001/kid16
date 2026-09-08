@@ -1,4 +1,5 @@
 import { Sparkles, Gamepad2, RefreshCw, HeartHandshake, TrendingUp } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 const PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167435/kindy_slide2.webp';
@@ -151,7 +152,7 @@ export default function TeachingMethod() {
                 }}
               >
                 <img
-                  src={PHOTO}
+                  src={cloudinary(PHOTO, 420, 525)}
                   alt="Giáo viên đồng hành cùng bé học tiếng Anh tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"

@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface ActivityRow {
   photo: string;
@@ -165,7 +166,7 @@ function ActivityRowBlock({
             style={{ borderRadius: activity.photoShape }}
           >
             <img
-              src={activity.photo}
+              src={cloudinary(activity.photo, 520, 390)}
               alt={activity.title}
               className="h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
               loading="lazy"
