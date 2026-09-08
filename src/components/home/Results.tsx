@@ -1,6 +1,7 @@
 import { type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheck as CheckCircle2, Sparkles, Award, Quote } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Stat {
   value: string;
@@ -136,7 +137,7 @@ export default function Results() {
       {/* Editorial background — soft, dimmed with cream/sky overlay */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinary(BG_IMAGE, 1280, 800)}
           alt=""
           className="h-full w-full object-cover opacity-[0.12]"
         />
@@ -293,7 +294,7 @@ function FlagshipCard({
           style={{ borderRadius: '52% 48% 56% 44% / 48% 54% 46% 52%' }}
         >
           <img
-            src={student.photo}
+            src={cloudinary(student.photo, 144, 144)}
             alt={`Học viên ${student.name} tại ILE`}
             className="h-full w-full object-cover object-center transition-transform duration-700 ease-smooth group-hover:scale-105"
             loading="lazy"
@@ -379,7 +380,7 @@ function SpotlightCard({ student }: { student: Student }) {
           style={{ borderRadius: student.photoShape }}
         >
           <img
-            src={student.photo}
+            src={cloudinary(student.photo, 96, 96)}
             alt={`Học viên ${student.name} tại ILE`}
             className="h-full w-full bg-cream-50 object-contain transition-transform duration-700 ease-smooth group-hover:scale-105"
             loading="lazy"

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navItems, trialLink, type NavItem } from '@/lib/navigation';
+import { cloudinary } from '@/lib/cloudinary';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +41,7 @@ export default function Header() {
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-[20px] bg-ink-900 shadow-soft transition-transform duration-300 ease-smooth group-hover:scale-105">
               <img
-                src="https://res.cloudinary.com/wsaz946u/image/upload/v1788166775/logo-ile.png"
+                src={cloudinary("https://res.cloudinary.com/wsaz946u/image/upload/v1788166775/logo-ile.png", 24, 24)}
                 alt="ILE English Center"
                 className="h-6 w-6 rounded-[14px] object-cover"
               />

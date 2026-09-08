@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { trialLink } from '@/lib/navigation';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Program {
   age: string;
@@ -159,7 +160,7 @@ function ProgramPanel({ program, index }: { program: Program; index: number }) {
           style={{ borderRadius: '52% 48% 44% 56% / 45% 54% 46% 55%' }}
         >
           <img
-  src={program.image}
+  src={cloudinary(program.image, 360, 305)}
   alt={`${program.title} tại ILE`}
   className={`h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105 ${program.age === '11-15' ? 'object-top' : ''}`}
   loading="lazy"
@@ -177,7 +178,7 @@ function ProgramPanel({ program, index }: { program: Program; index: number }) {
         </div>
 
         <img
-          src={program.character}
+          src={program.character.endsWith('.svg') ? program.character : cloudinary(program.character, 80, 80)}
           alt=""
           aria-hidden
           className="absolute -bottom-2 -right-4 h-20 w-20 object-contain drop-shadow-[0_8px_16px_rgba(31,42,55,0.14)] transition-transform duration-300 ease-smooth group-hover:rotate-6 group-hover:scale-105"

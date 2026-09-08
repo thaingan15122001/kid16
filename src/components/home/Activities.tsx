@@ -1,6 +1,7 @@
 import { type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Activity {
   photo: string;
@@ -206,7 +207,7 @@ function Polaroid({
         style={{ borderRadius: '10px' }}
       >
         <img
-          src={activity.photo}
+          src={cloudinary(activity.photo, 420, 315)}
           alt={activity.caption}
           className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
           loading="lazy"

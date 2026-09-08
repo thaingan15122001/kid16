@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react';
 import { Sparkles } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface PageBannerProps {
   title: ReactNode;
@@ -26,7 +27,7 @@ export default function PageBanner({
       <section className="relative overflow-hidden">
         <div className="relative min-h-[420px] lg:min-h-[520px]">
           <img
-            src={image}
+            src={cloudinary(image, 1280, 520)}
             alt={imageAlt}
             className="absolute inset-0 h-full w-full object-cover"
             loading="eager"
@@ -113,7 +114,7 @@ export default function PageBanner({
               style={{ borderRadius: '46% 54% 52% 48% / 54% 46% 54% 46%' }}
             >
               <img
-                src={image}
+                src={cloudinary(image, 520, 390)}
                 alt={imageAlt}
                 className="h-full w-full object-cover"
                 loading="eager"

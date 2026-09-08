@@ -1,5 +1,6 @@
 import { type CSSProperties } from 'react';
 import { Compass, Users, ChartLine as LineChart, Heart, Milestone } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Strength {
   icon: typeof Compass;
@@ -133,7 +134,7 @@ export default function WhyILE() {
                   style={{ borderRadius: '58% 42% 45% 55% / 48% 55% 45% 52%' }}
                 >
                   <img
-                    src={HERO_IMAGE}
+                    src={cloudinary(HERO_IMAGE, 420, 560)}
                     alt="Giáo viên và các bé cùng học tập tại ILE"
                     className="h-full w-full object-cover"
                     loading="lazy"
@@ -148,7 +149,7 @@ export default function WhyILE() {
                     style={{ borderRadius: '46% 54% 60% 40% / 54% 44% 56% 46%' }}
                   >
                     <img
-                      src={SECONDARY_IMAGE}
+                      src={cloudinary(SECONDARY_IMAGE, 144, 144)}
                       alt="Các bé tham gia hoạt động cùng nhau"
                       className="h-full w-full object-cover"
                       loading="lazy"
@@ -158,7 +159,7 @@ export default function WhyILE() {
 
                 {/* Leon character peeking top-left */}
                 <img
-                  src={LEON}
+                  src={cloudinary(LEON, 96, 96)}
                   alt=""
                   aria-hidden
                   className="absolute -left-10 -top-8 h-24 w-24 -rotate-6 drop-shadow-[0_8px_16px_rgba(31,42,55,0.14)]"
@@ -221,7 +222,7 @@ export default function WhyILE() {
               style={{ borderRadius: '52% 48% 46% 54% / 50% 54% 46% 50%' }}
             >
               <img
-                src={HERO_IMAGE}
+                src={cloudinary(HERO_IMAGE, 420, 560)}
                 alt="Giáo viên và các bé cùng học tập tại ILE"
                 className="h-full w-full object-cover"
                 loading="lazy"
@@ -229,7 +230,7 @@ export default function WhyILE() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900/15 via-transparent to-transparent" />
             </div>
             <img
-              src={LEON}
+              src={cloudinary(LEON, 96, 96)}
               alt=""
               aria-hidden
               className="absolute -left-4 -top-6 h-16 w-16 -rotate-6 drop-shadow-[0_6px_12px_rgba(31,42,55,0.14)]"
@@ -240,7 +241,7 @@ export default function WhyILE() {
                 style={{ borderRadius: '46% 54% 60% 40% / 54% 44% 56% 46%' }}
               >
                 <img
-                  src={SECONDARY_IMAGE}
+                  src={cloudinary(SECONDARY_IMAGE, 144, 144)}
                   alt="Các bé tham gia hoạt động cùng nhau"
                   className="h-full w-full object-cover"
                   loading="lazy"

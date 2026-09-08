@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { trialLink } from '@/lib/navigation';
+import { cloudinary } from '@/lib/cloudinary';
 
 const CHILD_MAIN =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788167436/kindy_slide3.webp';
@@ -90,10 +91,11 @@ export default function Hero() {
                 }}
               >
                 <img
-                  src={CHILD_MAIN}
+                  src={cloudinary(CHILD_MAIN, 400, 300)}
                   alt="Đứa trẻ đang học tiếng Anh tại ILE"
                   className="h-full w-full object-cover object-top"
                   loading="eager"
+                  fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/15 via-transparent to-transparent" />
               </div>
@@ -116,7 +118,7 @@ export default function Hero() {
                 }}
               >
                 <img
-                  src={CHILD_SECONDARY}
+                  src={cloudinary(CHILD_SECONDARY, 80, 80)}
                   alt="Các bé cùng nhau học tập"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -236,10 +238,11 @@ export default function Hero() {
                   }}
                 >
                   <img
-                    src={CHILD_MAIN}
+                    src={cloudinary(CHILD_MAIN, 520, 650)}
                     alt="Đứa trẻ đang học tiếng Anh tại ILE"
                     className="h-full w-full object-cover"
                     loading="eager"
+                    fetchpriority="high"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900/15 via-transparent to-transparent" />
                 </div>
@@ -254,7 +257,7 @@ export default function Hero() {
                   }}
                 >
                   <img
-                    src={CHILD_SECONDARY}
+                    src={cloudinary(CHILD_SECONDARY, 160, 160)}
                     alt="Các bé cùng nhau học tập"
                     className="h-full w-full object-cover"
                     loading="lazy"

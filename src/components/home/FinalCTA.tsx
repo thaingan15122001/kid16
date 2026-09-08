@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { trialLink } from '@/lib/navigation';
+import { cloudinary } from '@/lib/cloudinary';
 
 const HERO_PHOTO =
   'https://res.cloudinary.com/wsaz946u/image/upload/v1788166775/HeroBanner-1.jpg';
@@ -41,7 +42,7 @@ export default function FinalCTA({
                 }}
               >
                 <img
-                  src={HERO_PHOTO}
+                  src={cloudinary(HERO_PHOTO, 480, 600)}
                   alt="Đứa trẻ vui vẻ học tiếng Anh tại ILE"
                   className="h-full w-full object-cover"
                   loading="lazy"

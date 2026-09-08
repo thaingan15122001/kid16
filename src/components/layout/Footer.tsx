@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { navItems, trialLink } from '@/lib/navigation';
+import { cloudinary } from '@/lib/cloudinary';
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
               <span className="flex h-10 w-10 items-center justify-center rounded-[20px] bg-ink-900">
                 <img
-                  src="https://res.cloudinary.com/wsaz946u/image/upload/v1788166775/logo-ile.png"
+                  src={cloudinary("https://res.cloudinary.com/wsaz946u/image/upload/v1788166775/logo-ile.png", 24, 24)}
                   alt="ILE English Center"
                   className="h-6 w-6 rounded-[14px] object-cover"
                 />

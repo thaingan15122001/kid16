@@ -7,6 +7,7 @@ import {
   Globe,
   Sparkles,
 } from 'lucide-react';
+import { cloudinary } from '@/lib/cloudinary';
 
 interface Teacher {
   prefix: string;
@@ -190,7 +191,7 @@ export default function Teachers() {
       {/* Editorial background image — soft, dimmed with cream overlay */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src={BG_IMAGE}
+          src={cloudinary(BG_IMAGE, 1280, 800)}
           alt=""
           className="h-full w-full object-cover opacity-[0.14]"
         />
@@ -364,7 +365,7 @@ function TeacherCard({ teacher }: { teacher: Teacher; index: number }) {
           style={{ borderRadius: teacher.photoShape }}
         >
           <img
-            src={teacher.photo}
+            src={cloudinary(teacher.photo, 340, 255)}
             alt={`Hoạt động giảng dạy — ${teacher.prefix} ${teacher.name}`}
             className="h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
             loading="lazy"
