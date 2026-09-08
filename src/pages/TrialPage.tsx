@@ -8,7 +8,10 @@ export default function TrialPage() {
         description="Đăng ký học thử miễn phí tại ILE — con được trải nghiệm một buổi học thực tế, không cần chuẩn bị gì trước. Hoàn toàn miễn phí, không ràng buộc, phản hồi trong 24h."
       />
       <div className="container-page py-20">
-        <p className="font-body text-ink-600">
+        <h1 className="font-heading text-3xl font-extrabold text-ink-900">
+          Đăng ký học thử
+        </h1>
+        <p className="mt-4 font-body text-ink-600">
           Nội dung trang Đăng ký học thử sẽ được xây dựng ở giai đoạn tiếp theo.
         </p>
       </div>

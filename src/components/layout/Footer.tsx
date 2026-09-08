@@ -27,9 +27,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
+            <h2 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
               Khám phá
-            </h3>
+            </h2>
             <ul className="mt-4 space-y-3">
               {navItems.map((item) => (
                 <li key={item.to}>
@@ -45,9 +45,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
+            <h2 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
               Liên hệ
-            </h3>
+            </h2>
             <ul className="mt-4 space-y-3 font-body text-sm text-ink-600">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-ink-500" />
@@ -65,9 +65,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
+            <h2 className="font-heading text-sm font-bold uppercase tracking-wider text-ink-900">
               Bắt đầu hành trình
-            </h3>
+            </h2>
             <p className="mt-4 font-body text-sm text-ink-600">
               Đăng ký học thử miễn phí cho bé yêu của bạn.
             </p>
