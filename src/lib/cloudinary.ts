@@ -15,3 +15,18 @@ export function cloudinary(url: string, width: number, height: number): string {
   const transform = `w_${w},h_${h},c_fill,g_auto,q_auto,f_auto`;
   return url.replace('/upload/', `/upload/${transform}/`);
 }
+
+/**
+ * Transforms a Cloudinary URL for images displayed with object-contain or
+ * object-cover where exact dimensions aren't critical (decorative characters,
+ * background textures). Uses c_limit to avoid upscaling.
+ *
+ * @param url Original Cloudinary URL
+ * @param width Maximum display width in pixels (will be doubled for retina)
+ * @returns Transformed Cloudinary URL with optimization parameters
+ */
+export function cloudinaryFit(url: string, width: number): string {
+  const w = Math.round(width * 2);
+  const transform = `w_${w},c_limit,q_auto,f_auto`;
+  return url.replace('/upload/', `/upload/${transform}/`);
+}

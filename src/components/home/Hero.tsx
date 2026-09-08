@@ -95,7 +95,7 @@ export default function Hero() {
                   alt="Đứa trẻ đang học tiếng Anh tại ILE"
                   className="h-full w-full object-cover object-top"
                   loading="eager"
-                  fetchpriority="high"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/15 via-transparent to-transparent" />
               </div>
@@ -242,7 +242,7 @@ export default function Hero() {
                     alt="Đứa trẻ đang học tiếng Anh tại ILE"
                     className="h-full w-full object-cover"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchPriority="high"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900/15 via-transparent to-transparent" />
                 </div>
